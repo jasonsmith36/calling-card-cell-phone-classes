@@ -1,17 +1,20 @@
 class CallingCard {
-    constructor(minutes) {
-        this.minutes = minutes
+    constructor(costPerMinuteInCents) {
+        this.costPerMinuteInCents = costPerMinuteInCents
+        this.remainingMinutes = 0
     }
 
-    addDollars(num) {
-
+    addDollars(amtInDollars) {
+        let cents = amtInDollars * 100
+        let minutes = cents / this.costPerMinuteInCents
+        this.remainingMinutes = Number.isInteger(minutes) ? minutes : Math.floor(minutes)
     }
 
     getRemainingMinutes() {
-
+        return this.remainingMinutes
     }
 
-    useMinutes() {
-
+    useMinutes(numOfMinutes) {
+        this.remainingMinutes -= numOfMinutes
     }
 }
