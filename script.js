@@ -1,7 +1,7 @@
-CallingCard card = new CallingCard(20)
+let card = new CallingCard(20)
 card.addDollars(1) // add 100 cents @ 20 cents/minute = 5 minutes added
 
-CellPhone phone = new CellPhone(card)
+let phone = new CellPhone(card)
 phone.call("555-1111")
 phone.tick()       // 1 minute elapsed
 phone.tick()       // 2 minutes elapsed
