@@ -43,10 +43,9 @@ class CellPhone {
             let pluralOrSingular = callLength !== 1 ? 'minutes' : 'minute'
             let wasCutOffYo = wasCutOff ? 'cut off at' : ''
             historyString += ` ${wasCutOffYo} ${phoneNumber} (${callLength} ${pluralOrSingular}),`
-            // "555-1111 (2 minutes), 555-3333 (cut off at 3 minutes)"
         })
         
-        
+
         return historyString.slice(0, historyString.length-1)
     }
 }
