@@ -50,6 +50,5 @@ class CellPhone {
         });
 
         return callHistory.slice(0, callHistory.length-1);
-
     }
 }
